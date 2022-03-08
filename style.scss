@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background: wheat;
+  color: #222;
+  body {
+    font-family: "Open Sans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+//  slider design
+
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .slider_right,
+    .slider_left {
+      display: flex;
+    }
+  }
+  // icon
+  &_right,
+  &_left {
+    position: absolute;
+    top: 48%;
+    z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    padding: 2% 4%;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.7s ease;
+    }
+  }
+  &_left {
+    left: 2%;
+  }
+  &_right {
+    right: 2%;
+  }
+
+  ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 1020px;
+      height: 760px;
+      text-align: center;
+    }
+    img {
+      width: 1020px;
+      height: 760px;
+      object-fit: cover;
+    }
+  }
+}
+
+//  slider end
